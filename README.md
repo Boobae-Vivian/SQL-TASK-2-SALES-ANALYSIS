@@ -28,6 +28,25 @@ Overall, this task encompasses a variety of data manipulation and analysis skill
 
 ### 1. Determine the total number of rows present in the SALES table:
 
+To ascertain the overall count of rows within the sales table, the SELECT function, combined with the COUNT aggregation, will be utilized. The syntax for this operation is presented below:
+
+```sql
+SELECT COUNT(*) AS Row_Numbers FROM Sales;
+
+In the provided syntax, the asterisk (*) denotes all rows, and the AS keyword signifies the creation of an alias. Consequently, the output of the analysis will feature "Row_Numbers" as the column header instead of "COUNT()".
+```
+
+![](Task4.png)
+
+### 2. Identify the regions in which the business operates:
+
+
+
+
+
+
+
+
 
 
 

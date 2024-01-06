@@ -54,7 +54,7 @@ In the provided syntax, the DISTINCT keyword applied to the "Region" column ensu
 
 ### 3.  Calculate the total profit specifically generated in the WEST Region:
 
-To compute the total profit specifically generated in the West region, we will utilize the SELECT function, the SUM aggregation, the aliasing feature, and the WHERE CLAUSE function. The syntax for this operation is presented below:
+To compute the total profit specifically generated in the West region, we will utilize the SELECT function, the SUM aggregation, the AS (aliasing feature), and the WHERE CLAUSE function. The syntax for this operation is presented below:
 
 ```sql
 SELECT ROUND(SUM(Profit), 2) AS `Total Profit` FROM Stores
@@ -64,6 +64,33 @@ WHERE Region = "West";
 In the provided syntax, the ROUND function is applied to limit the result to two decimal places, enhancing readability. The WHERE CLAUSE ensures that only data from the West region is considered in the calculation. The output of this analysis reveals a total profit of $106,021.15 generated in the West region.
 
 ![](Task4b.png)
+
+### 4. Compute the average profit generated from the sales of the company's products:
+
+To determine the average profit generated from the sales of the company's products, the SELECT function, AVG aggregation (commonly denoted as AVG), and the AS function for aliasing are utilized. The syntax for this calculation is outlined below:
+
+```sql
+SELECT ROUND(AVG(Profit), 2) AS `Average Profit` FROM Stores;
+```
+
+In this syntax, the AVG aggregation function calculates the average profit, and the ROUND function is applied to round the result to two decimal places for clarity. The AS keyword is used to create an alias, renaming the output column as "Average Profit" instead of the default "AVG(Profit)." The expected result of this analysis is an average profit of $29.18 generated from the sales of the company's products.
+
+![](Task4c.png)
+
+### 5. Count the total number of unique products sold by the company:
+
+To determine the count of unique products sold by the company, the SELECT function, COUNT aggregation, DISTINCT function, and the AS feature for aliasing are utilized. The syntax for this operation is presented below:
+
+```sql
+SELECT ROUND(COUNT(DISTINCT `Product Name`)) AS Number_of_Products FROM Stores;
+```
+In this syntax, the DISTINCT function ensures that only unique product names are considered in the count. The AS keyword is used to create an alias, naming the output column as "Number_of_Products" instead of the default "COUNT(DISTINCT Product Name). The ROUND function is applied to round the result to the nearest whole number. The expected result of this analysis is a count of 1798, representing the total number of unique products sold by the company.
+
+![](Task4d.png)
+
+
+
+
 
 
 

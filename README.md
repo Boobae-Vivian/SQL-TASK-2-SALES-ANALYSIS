@@ -88,6 +88,21 @@ In this syntax, the DISTINCT function ensures that only unique product names are
 
 ![](Task4d.png)
 
+### 6. Identify and showcase the names and cities of the top 5 customers who contribute the most to the company's overall profit:
+
+To pinpoint and display the names and cities of the top 5 customers contributing the most to the company's overall profit, the SELECT function, ORDER BY clause in descending order, and the LIMIT function are employed. The syntax for this operation is presented below:
+
+```sql
+SELECT `Customer Name`, City, Profit FROM Stores
+ORDER BY Profit DESC
+LIMIT 5;
+```
+
+In this syntax: Customer Name, City, and Profit are selected columns to be displayed in the output. ORDER BY Profit DESC ensures the results are arranged in descending order based on the Profit column. LIMIT 5 restricts the output to only the top 5 records with the highest profits.
+The expected result of this analysis is a list of the names and cities of the top 5 customers who contribute the most to the company's overall profit with Tamara Chand in Lafayette city having the highest profit of 8399.976
+
+![](Task4e.png)
+
 
 
 

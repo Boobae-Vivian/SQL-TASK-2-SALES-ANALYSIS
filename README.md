@@ -32,15 +32,38 @@ To ascertain the overall count of rows within the sales table, the SELECT functi
 
 ```sql
 SELECT COUNT(*) AS Row_Numbers FROM Sales;
+```
 
 In the provided syntax, the asterisk (*) denotes all rows, and the AS keyword signifies the creation of an alias. Consequently, the output of the analysis will feature "Row_Numbers" as the column header instead of "COUNT()".
-```
+
 
 ![](Task4.png)
 
 ### 2. Identify the regions in which the business operates:
 
+To pinpoint the regions in which the business operates, we will utilize the SELECT function along with the COUNT aggregation, DISTINCT function, and the aliasing feature. The syntax for this task is outlined below:
 
+```sql
+SELECT COUNT(DISTINCT Region) AS Number_of_Regions FROM Stores;
+```
+
+In the provided syntax, the DISTINCT keyword applied to the "Region" column ensures that the command counts the number of unique regions rather than tallying the occurrences of each region. The AS keyword serves to rename the output column as "Number_of_Regions," replacing the default "COUNT(DISTINCT Region)." The expected result of this analysis is a count of 4 unique regions.
+
+
+![](Task4a.png)
+
+### 3.  Calculate the total profit specifically generated in the WEST Region:
+
+To compute the total profit specifically generated in the West region, we will utilize the SELECT function, the SUM aggregation, the aliasing feature, and the WHERE CLAUSE function. The syntax for this operation is presented below:
+
+```sql
+SELECT ROUND(SUM(Profit), 2) AS `Total Profit` FROM Stores
+WHERE Region = "West";
+```
+
+In the provided syntax, the ROUND function is applied to limit the result to two decimal places, enhancing readability. The WHERE CLAUSE ensures that only data from the West region is considered in the calculation. The output of this analysis reveals a total profit of $106,021.15 generated in the West region.
+
+![](Task4b.png)
 
 
 

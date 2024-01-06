@@ -103,6 +103,32 @@ The expected result of this analysis is a list of the names and cities of the to
 
 ![](Task4e.png)
 
+### 7. Display the sales figures for cities where the total sales is greater than 20000:
+
+To present the sales figures for cities where the total sales exceed 20000, we will utilize the SELECT function, SUM aggregation, GROUP BY clause, and HAVING function. The syntax for this operation is outlined below:
+
+```sql
+SELECT City, ROUND(SUM(Sales), 0) AS `Total Sales` FROM STORES
+GROUP BY City
+HAVING `Total Sales` > 20000;
+```
+In this syntax: The SELECT statement retrieves the City and the rounded sum of Sales for each city. The GROUP BY clause organizes the results by City, grouping sales data accordingly. The HAVING clause filters the grouped results, retaining only those with a Total Sales greater than 20000. The ROUND function is applied to round the Total Sales to the nearest whole number for clarity. The result of this syntax identifies cities with total sales greater than 20000, with the example highlighting Los Angeles as the city with the highest total sales of 173169.
+
+![](Task4f.png)
+
+## SUMMARY
+
+The task involved a comprehensive analysis of the company's sales data, encompassing various aspects such as the total number of rows, regional operations, profitability, average product profits, order fulfillment efficiency, product diversity, top-contributing customers, and high-performing cities. Each query was designed to extract specific insights, leveraging SQL functions and clauses.
+
+The analysis successfully determined the total number of rows in the sales table, identified the regions in which the business operates, calculated the total profit in the West region, computed the average profit from product sales, determined the total number of unique products sold, identified the top 5 customers contributing most to overall profit, and showcased sales figures for cities with total sales exceeding 20000.
+
+## CONCLUSION
+
+Insights into high-performing cities provide valuable information for market expansion or focused marketing campaigns. The company may also consider exploring factors influencing the top 5 customers' contributions to enhance customer relationship management strategies.
+
+Overall, this comprehensive analysis equips the company with actionable insights to optimize operations, enhance customer satisfaction, and drive profitability. Ongoing monitoring of these metrics will enable the company to adapt and refine strategies as needed.
+
+
 
 
 
